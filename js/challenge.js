@@ -3,31 +3,25 @@ const plus = document.getElementById('plus')
 const heart = document.getElementById('heart')
 const pause = document.getElementById('pause')
 const submit = document.getElementById('submit')
-
+let counter = document.getElementById('counter')
 
 timer = function() {
     return setInterval(function(){
-        var a = document.getElementById('counter')
-        b = parseInt(a.innerText)
-        a.innerText = b+1
+        let timerIncrement = parseInt(counter.innerText)
+        counter.innerText = timerIncrement+1
     }, 500)
 }
 interval = timer()
 
 plus.addEventListener('click', function() {
-    var a = document.getElementById('counter')
-    b = parseInt(a.innerText)
-    a.innerText = b+1
+    let counterUp = parseInt(counter.innerText)
+    counter.innerText = counterUp+1
 })
 
 minus.addEventListener('click', function() {
-    var a = document.getElementById('counter')
-    b = parseInt(a.innerText)
-    a.innerText = b-1
+    let counterDown = parseInt(counter.innerText)
+    counter.innerText = counterDown-1
 })
-
-
-
 
 heart.addEventListener('click', function(){})
 pause.addEventListener('click', function(){})
